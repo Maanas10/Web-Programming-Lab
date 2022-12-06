@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="purple">
+<font color="red"><h3 align="center"><i>Prime or Not</i></h3></font>
+<script>
+document.write("click the below button to check wheather the given number is prime or not:")
+
+function prime()
+{
+let num=prompt("Enter the number");
+for(i=2;i<num;i++)
+{
+if(num%i==0)
+{
+alert(""+num+" is not a prime Number");
+break;
+}
+else
+{
+alert(""+num+" is a prime number");
+}
+}
+}
+
+</script>
+<form>
+<input type="button" value="click" onclick="prime()">
+</form></body>
+</html>
