@@ -8,19 +8,31 @@ document.write("click the below button to check wheather the given number is pri
 function prime()
 {
 let num=prompt("Enter the number");
+var ptr=true;
 for(i=2;i<num;i++)
 {
+
+
 if(num%i==0)
 {
-alert(""+num+" is not a prime Number");
+ptr=false;
 break;
+}
+}
+if(num==1)
+{
+alert(""+num+" is niether prime nor composite Number");
+}
+else if(ptr==false)
+{
+alert(""+num+" is not a prime Number");
 }
 else
 {
 alert(""+num+" is a prime number");
 }
 }
-}
+
 
 </script>
 <form>
