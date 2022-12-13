@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<font color="red"><h3 align="center"><i>FACTORIAL</i></h3></font>
+<script>
+
+document.write("Factorial of a given number")
+function facto()
+{
+let n=prompt("Enter the number");
+var fact=1;
+var b=n;
+while(n>1)
+{
+fact=fact*n;
+n=n-1;
+}
+alert("factorial of "+b+ " is " +fact)
+}
+</script>
+<form>
+<input type="button" value="click" onclick="facto()">
+</form></body>
+</html>
+
