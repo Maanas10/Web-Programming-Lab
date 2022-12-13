@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<font color="red"><h3 align="center"><i>FIBONACCI</i></h3></font>
+<script>
+document.write("click the below button to find fibonacci:")
+
+function fibona()
+{
+let n=prompt("Enter the number");
+var first=0;
+var second=1;
+var i=2;
+var fib=0;
+if(n!=0)
+{
+document.write(first+"<br>")
+document.write(second+"<br>")
+while(i<n)
+{
+i=i+fib;
+fib=first+second;
+first=second;
+second=fib;
+document.write(fib+"<br>")
+}}}
+</script>
+<form>
+<input type="button" value="click" onclick="fibona()">
+</form></body>
+</html>
+
+
