@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Registration Form</title>
+ </head>
+  <body>
+<h1 align="center">FORM</h1>
+  
+    <form id="registration-form" method="post" onsubmit="return validateForm()">
+<fieldset>
+<legend>REGISTRATION FORM</legend>
+      <label>First Name:</label>
+      <input type="text" id="fname" name="fname">
+      <label>Last Name:</label>
+      <input type="text" id="lname" name="lname"><br><br><br>
+      <label>Email:</label>
+      <input type="email" id="email" name="email"><br><br><br>
+      <label>Phone Number:</label>
+      <input type="text" id="phno" name="phno"><br><br><br>
+      <label>Gender:</label>
+      <input type="radio" name="gender"value="male"/>Male
+      <input type="radio" name="gender"value="female"/>Female
+      <input type="radio" name="gender"value="Other"/>Other<br><br><br>
+      <label>Password:</label>
+      <input type="password" id="password" name="password"><br><br><br>
+      <label>Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password"><br><br><br>
+     <center> <input type="submit" value="Submit"></center>
+
+</fieldset>
+    </form> 
+    <script>
+      function validateForm() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var phno = document.getElementById("phno").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm-password").value;
+        var errorMessage = "";
+
+        if (fname == "") {
+          errorMessage += "First Name is required.\n";
+        }
+        if (lname == "") {
+          errorMessage += "Last Name is required.\n";
+        }
+        if (phno == "") {
+          errorMessage += "Phone number is required.\n";
+        }
+
+        if (email == "") {
+          errorMessage += "Email is required.\n";
+        }
+
+        if (password == "") {
+          errorMessage += "Password is required.\n";
+        }
+
+        if (password != confirmPassword) {
+          errorMessage += "Passwords do not match.\n";
+        }
+
+        if (errorMessage != "") {
+          alert(errorMessage);
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
