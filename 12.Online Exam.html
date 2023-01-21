@@ -1,0 +1,61 @@
+<html>
+<head>
+<script>
+function exam()
+{
+var m=0;
+if(document.examForm.one.value=="3")
+m=m+1;
+if(document.examForm.two.value=="Declaration")
+m=m+1;
+if(document.examForm.three.value=="zero")
+m=m+1;
+if(document.examForm.four.value=="m")
+m=m+1;
+alert("Thankyou  for taking the online exam \n Your score is:"+m+" out of 4");
+}
+</script>
+</head>
+<body bgcolor="pink">
+<form name="examForm" onsubmit="return exam()" method="get">
+<h1 align="center"><u>JAVASCRIPT EXAM</u></h1>
+Enter your full name:<input type="text" name="name"/><br><br>
+Enter your register number:<input type="text" name="reg"/>
+<p>
+<b>1)Which type of JavaScript language is ___? </b><br>
+<input type="radio" name="one" value="2">Object-Oriented<br>
+<input type="radio" name="one" value="3">Object-Based<br>
+<input type="radio" name="one" value="5">Assembly-language<br>
+<input type="radio" name="one" value="6">High-level<br>
+</p>
+<p>
+<b>2)The "function" and " var" are known as:?</b><br>
+<input type="radio" name="two" value="Keywords"> Keywords<br>
+<input type="radio" name="two" value="Data">Data types<br>
+<input type="radio" name="two" value="Declaration">Declaration statements<br>
+<input type="radio" name="two" value="Prototypes">Prototypes
+<br>
+</p>
+<p>
+<b>3) In the JavaScript, which one of the following is not considered as an error</b><br>
+<input type="radio" name="three" value="Syntax">Syntax error<br>
+<input type="radio" name="three" value="semicolons">Missing of semicolons<br>
+<input type="radio" name="three" value="zero">Division by zero<br>
+<input type="radio" name="three" value="bracket">Missing of Bracket
+<br>
+</p>
+<p>
+<b>4)Which one of the following is an ternary operator?</b><br>
+<input type="radio" name="four" value="m">?<br>
+<input type="radio" name="four" value="p">:<br>
+<input type="radio" name="four" value="o">-<br>
+<input type="radio" name="four" value="h">+<br>
+</p>
+<center>
+<input type="submit" value="submit">
+<input type="reset" value="reset">
+</center>
+</body>
+</html>
+
+
