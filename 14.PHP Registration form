@@ -1,0 +1,53 @@
+<html><head>
+<title>registration form</title>
+</head>
+<body>
+
+<h2 style="color:lightseagreen;text-align:center;font-style:Red">REGISTRATION FORM</h2>
+
+<form name="form" action="" method="POST">
+<fieldset>
+<legend>FORM</legend>
+
+User Name:<input type="text" name="name"><br><br>
+Email:<input type="email" name="email"><br><br>
+Phone Number:<input type="tel" name="mob"><br><br>
+Password:<input type="password" name="fps"><br><br>
+<input type="submit" value="Submit" name="submit">
+</fielset>
+</form>
+<?php
+if(isset($_POST['submit']))
+{
+$username=$_POST['name'];
+$password=$_POST['fps'];
+$email=$_POST['email'];
+$phonenumber=$_POST['mob'];
+if(empty($username))
+{
+ echo "<script>alert('Enter username')</script>";
+}
+else if(empty($email))
+{
+ echo "<script>alert('Enter email')</script>";
+}
+else if(empty($phonenumber))
+{
+ echo "<script>alert('Enter phone number')</script>";
+}
+else if(empty($password))
+{
+ echo "<script>alert('Enter password')</script>";
+}
+else if(strlen($password)<8)
+{
+ echo "<script>alert('Your password must contain atleat 8 character')</script>";
+}
+else
+{
+ echo "<script>alert('Registration successful')</script>";
+}
+}
+?>
+</body>
+</html>
